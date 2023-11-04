@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -17,15 +17,15 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat", sans-serif;
-  --second-font: "Montagu Slab", serif;
+  --body-font: 'Montserrat', sans-serif;
+  --second-font: 'Montagu Slab', serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -45,8 +45,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -71,7 +71,7 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 input,
@@ -80,7 +80,10 @@ button {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
@@ -103,12 +106,10 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 
-
-/*========== 
-	Color changes in some parts of 
+/*==========
+	Color changes in some parts of
 	the website, in dark theme
 ==========*/
-
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -138,75 +139,61 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 
-
 /* Navigation for mobile devices */
-
 
 /* Add shadow header */
 
-
 /* Active link */
-
 
 /*=============== SEARCH ===============*/
 
-
 /* Show search */
-
 
 /*=============== LOGIN ===============*/
 
-
 /* Show login */
-
 
 /*=============== HOME ===============*/
 
-
 /* Swiper class */
 
-
 /*=============== BUTTON ===============*/
-
-
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 1.5rem;
+  transition: box-shadow 0.4s;
+}
+.button:hover{
+  box-shadow: 0 4px 32px hsla(230,72%,32%,.4);
+}
 /*=============== SERVICES ===============*/
-
 
 /*=============== FEATURED ===============*/
 
-
 /* Swiper class */
-
 
 /*=============== DISCOUNT ===============*/
 
-
 /*=============== NEW ===============*/
-
 
 /*=============== JOIN ===============*/
 
-
 /*=============== TESTIMONIAL ===============*/
-
 
 /*=============== FOOTER ===============*/
 
-
 /*=============== SCROLL BAR ===============*/
-
 
 /*=============== SCROLL UP ===============*/
 
-
 /* Show Scroll Up */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
-
 /* For medium devices */
-
 
 /* For large devices */

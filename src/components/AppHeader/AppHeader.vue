@@ -1,0 +1,138 @@
+<script setup lang="ts">
+import type { ComponentInternalInstance } from 'vue'
+import { getCurrentInstance } from 'vue'
+
+const { appContext } = getCurrentInstance() as ComponentInternalInstance
+const gotoSearch = () => {
+  appContext.config.globalProperties.$mitt.emit('search', true)
+}
+const gotoLogin = () => {
+  appContext.config.globalProperties.$mitt.emit('login', true)
+}
+</script>
+
+<template>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo"> <i class="ri-book-3-line"></i> StarLibrary </a>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">
+              <i class="ri-home-line"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#featured" class="nav__link">
+              <i class="ri-book-3-line"></i>
+              <span>Featured</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#discount" class="nav__link">
+              <i class="ri-price-tag-3-line"></i>
+              <span>Discount</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#new" class="nav__link">
+              <i class="ri-bookmark-line"></i>
+              <span>New Books</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#testimonial" class="nav__link">
+              <i class="ri-message-3-line"></i>
+              <span>Testimonial</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__actions">
+        <i class="ri-search-line search-button" id="search-button" @click="gotoSearch"></i>
+        <i class="ri-user-line login-button" id="login-button" @click="gotoLogin"></i>
+        <i class="ri-moon-line change-theme" id="theme-button"></i>
+      </div>
+    </nav>
+  </header>
+</template>
+
+<style scoped>
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  transition:
+    box-shadow 0.4s,
+    background-color 0.4s;
+}
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+  font-size: var(--font-medium);
+}
+.nav__logo i {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    box-shadow: 0 -8px 32px hsla(0, 0%, 0%, 0.1);
+    padding: 1.25rem 4rem;
+    transition: background-color 0.4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  color: var(--text-color);
+  transition: color 0.4s;
+}
+.nav__link span {
+  display: none;
+}
+
+.nav__link i {
+  font-size: 1.25rem;
+}
+.nav__link:hover {
+  color: var(--first-color);
+}
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.nav__actions i {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.nav__actions i:hover {
+  color: var(--first-color);
+}
+</style>
