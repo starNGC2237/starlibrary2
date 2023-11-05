@@ -2,6 +2,7 @@
 import AppHeader from '@/components/AppHeader/AppHeader.vue'
 import AppSearch from '@/components/AppSearch/AppSearch.vue'
 import AppLogin from '@/components/AppLogin/AppLogin.vue'
+import MainHome from '@/components/MainHome/MainHome.vue'
 </script>
 
 <template>
@@ -17,7 +18,7 @@ import AppLogin from '@/components/AppLogin/AppLogin.vue'
   <!--==================== MAIN ====================-->
   <main class="main">
     <!--==================== HOME ====================-->
-    <section class="home section" id="home"></section>
+    <MainHome />
 
     <!--==================== SERVICES ====================-->
     <section class="services section"></section>

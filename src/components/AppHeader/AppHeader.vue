@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ComponentInternalInstance } from 'vue'
-import { getCurrentInstance } from 'vue'
+import { getCurrentInstance, onBeforeUnmount, onMounted } from 'vue'
 
 const { appContext } = getCurrentInstance() as ComponentInternalInstance
 const gotoSearch = () => {
@@ -9,6 +9,20 @@ const gotoSearch = () => {
 const gotoLogin = () => {
   appContext.config.globalProperties.$mitt.emit('login', true)
 }
+// TODO: use throttle to improve performance
+const shadowFn = () => {
+  const header = document.getElementById('header') as HTMLElement
+  window.scrollY >= 50
+    ? header.classList.add('shadow-header')
+    : header.classList.remove('shadow-header')
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', shadowFn)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', shadowFn)
+})
 </script>
 
 <template>
@@ -60,7 +74,7 @@ const gotoLogin = () => {
 
 <style scoped>
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -134,5 +148,8 @@ const gotoLogin = () => {
 }
 .nav__actions i:hover {
   color: var(--first-color);
+}
+.shadow-header {
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
 }
 </style>
