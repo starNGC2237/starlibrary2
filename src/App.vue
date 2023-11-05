@@ -3,6 +3,8 @@ import AppHeader from '@/components/AppHeader/AppHeader.vue'
 import AppSearch from '@/components/AppSearch/AppSearch.vue'
 import AppLogin from '@/components/AppLogin/AppLogin.vue'
 import MainHome from '@/components/MainHome/MainHome.vue'
+import AppServices from '@/components/AppServices/AppServices.vue'
+import AppFeatured from '@/components/AppFeatured/AppFeatured.vue'
 </script>
 
 <template>
@@ -21,10 +23,10 @@ import MainHome from '@/components/MainHome/MainHome.vue'
     <MainHome />
 
     <!--==================== SERVICES ====================-->
-    <section class="services section"></section>
+    <AppServices />
 
     <!--==================== FEATURED ====================-->
-    <section class="featured section" id="featured"></section>
+    <AppFeatured />
 
     <!--==================== DISCOUNT ====================-->
     <section class="discount section" id="discount"></section>
