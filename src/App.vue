@@ -29,6 +29,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', scrollActive)
 })
 
+// TODO: use throttle to improve performance
 const scrollActive = () => {
   const sections = document.querySelectorAll('section[id]')
   const scrollDown = window.scrollY
@@ -37,8 +38,6 @@ const scrollActive = () => {
     const sectionTop = cur.offsetTop - 58
     const sectionId = cur.getAttribute('id')
     const sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-    console.log(sectionClass)
-    console.log(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight)
     if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
       sectionClass.classList.add('active-link')
     } else {
