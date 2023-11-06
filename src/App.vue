@@ -7,6 +7,7 @@ import AppServices from '@/components/AppServices/AppServices.vue'
 import AppFeatured from '@/components/AppFeatured/AppFeatured.vue'
 import AppDiscount from '@/components/AppDiscount/AppDiscount.vue'
 import AppNewBook from '@/components/AppNewBook/AppNewBook.vue'
+import AppJoin from '@/components/AppJoin/AppJoin.vue'
 </script>
 
 <template>
@@ -37,7 +38,7 @@ import AppNewBook from '@/components/AppNewBook/AppNewBook.vue'
     <AppNewBook />
 
     <!--==================== JOIN ====================-->
-    <section class="join section"></section>
+    <AppJoin />
 
     <!--==================== TESTIMONIAL ====================-->
     <section class="testimonial section" id="testimonial"></section>
