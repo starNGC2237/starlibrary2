@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import type { ComponentInternalInstance } from 'vue'
-import { getCurrentInstance, onBeforeUnmount, onMounted } from 'vue'
+import { getCurrentInstance, onBeforeUnmount, onMounted, ref } from 'vue'
 
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-line'
+let themeButton = ref()
 const { appContext } = getCurrentInstance() as ComponentInternalInstance
 const gotoSearch = () => {
   appContext.config.globalProperties.$mitt.emit('search', true)
@@ -15,6 +18,26 @@ const shadowFn = () => {
   window.scrollY >= 50
     ? header.classList.add('shadow-header')
     : header.classList.remove('shadow-header')
+}
+const getCurrentTheme = () => (document.body.classList.contains(darkTheme) ? 'dark' : 'light')
+const getCurrentIcon = () =>
+  themeButton.value.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+onMounted(() => {
+  themeButton.value = document.getElementById('theme-button') as HTMLElement
+  const selectedTheme = localStorage.getItem('selected-theme') || 'light'
+  const selectedIcon = localStorage.getItem('selected-icon') || 'ri-moon-line'
+
+  if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.value.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+  }
+})
+
+const changeTheme = () => {
+  document.body.classList.toggle(darkTheme)
+  themeButton.value.classList.toggle(iconTheme)
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
 }
 
 onMounted(() => {
@@ -66,7 +89,7 @@ onBeforeUnmount(() => {
       <div class="nav__actions">
         <i class="ri-search-line search-button" id="search-button" @click="gotoSearch"></i>
         <i class="ri-user-line login-button" id="login-button" @click="gotoLogin"></i>
-        <i class="ri-moon-line change-theme" id="theme-button"></i>
+        <i class="ri-moon-line change-theme" id="theme-button" @click="changeTheme"></i>
       </div>
     </nav>
   </header>
