@@ -11,6 +11,7 @@ import AppJoin from '@/components/AppJoin/AppJoin.vue'
 import AppTestimonial from '@/components/AppTestimonial/AppTestimonial.vue'
 import AppFooter from '@/components/AppFooter/AppFooter.vue'
 import { onBeforeUnmount, onMounted } from 'vue'
+import ScrollReveal from '../public/scrollreveal.min.js'
 
 // TODO: use throttle to improve performance
 const scrollUpFn = () => {
@@ -23,6 +24,19 @@ const scrollUpFn = () => {
 onMounted(() => {
   window.addEventListener('scroll', scrollUpFn)
   window.addEventListener('scroll', scrollActive)
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+  })
+  sr.reveal(
+    '.home__data, .featured__container,.new__container,.join__data,.testimonial__content,.footer'
+  )
+  sr.reveal('.home__images', { delay: 600 })
+  sr.reveal('.services__card', { interval: 100 })
+  sr.reveal('.discount__data', { origin: 'left' })
+  sr.reveal('.discount__images', { origin: 'left' })
 })
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', scrollUpFn)
