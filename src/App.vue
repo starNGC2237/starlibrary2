@@ -5,6 +5,8 @@ import AppLogin from '@/components/AppLogin/AppLogin.vue'
 import MainHome from '@/components/MainHome/MainHome.vue'
 import AppServices from '@/components/AppServices/AppServices.vue'
 import AppFeatured from '@/components/AppFeatured/AppFeatured.vue'
+import AppDiscount from '@/components/AppDiscount/AppDiscount.vue'
+import AppNewBook from '@/components/AppNewBook/AppNewBook.vue'
 </script>
 
 <template>
@@ -29,10 +31,10 @@ import AppFeatured from '@/components/AppFeatured/AppFeatured.vue'
     <AppFeatured />
 
     <!--==================== DISCOUNT ====================-->
-    <section class="discount section" id="discount"></section>
+    <AppDiscount />
 
     <!--==================== NEW BOOKS ====================-->
-    <section class="new section" id="new"></section>
+    <AppNewBook />
 
     <!--==================== JOIN ====================-->
     <section class="join section"></section>
