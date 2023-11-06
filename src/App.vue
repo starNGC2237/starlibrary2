@@ -31,9 +31,9 @@ onBeforeUnmount(() => {
 
 // TODO: use throttle to improve performance
 const scrollActive = () => {
-  const sections = document.querySelectorAll('section[id]')
+  const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section[id]')
   const scrollDown = window.scrollY
-  sections.forEach((cur: HTMLElement) => {
+  sections.forEach((cur) => {
     const sectionHeight = cur.offsetHeight
     const sectionTop = cur.offsetTop - 58
     const sectionId = cur.getAttribute('id')
