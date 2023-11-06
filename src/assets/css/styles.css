@@ -202,7 +202,18 @@ img {
 /*=============== FOOTER ===============*/
 
 /*=============== SCROLL BAR ===============*/
-
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: .5rem;
+  background-color: hsl(230,16%,85%);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-color: hsl(230,16%,65%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(230,16%,55%);
+}
 /*=============== SCROLL UP ===============*/
 
 /* Show Scroll Up */

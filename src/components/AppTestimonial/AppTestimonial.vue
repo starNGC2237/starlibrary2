@@ -9,7 +9,7 @@ const img1 = ref(img1Url)
 const img2 = ref(img2Url)
 const img3 = ref(img3Url)
 const img4 = ref(img4Url)
-let swiper = ref(null)
+let swiper = ref()
 
 onMounted(() => {
   swiper.value = new Swiper('.testimonial__swiper', {
