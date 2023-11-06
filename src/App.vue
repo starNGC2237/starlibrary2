@@ -8,6 +8,8 @@ import AppFeatured from '@/components/AppFeatured/AppFeatured.vue'
 import AppDiscount from '@/components/AppDiscount/AppDiscount.vue'
 import AppNewBook from '@/components/AppNewBook/AppNewBook.vue'
 import AppJoin from '@/components/AppJoin/AppJoin.vue'
+import AppTestimonial from '@/components/AppTestimonial/AppTestimonial.vue'
+import AppFooter from '@/components/AppFooter/AppFooter.vue'
 </script>
 
 <template>
@@ -41,11 +43,11 @@ import AppJoin from '@/components/AppJoin/AppJoin.vue'
     <AppJoin />
 
     <!--==================== TESTIMONIAL ====================-->
-    <section class="testimonial section" id="testimonial"></section>
+    <AppTestimonial />
   </main>
 
   <!--==================== FOOTER ====================-->
-  <footer class="footer"></footer>
+  <AppFooter />
 </template>
 
 <style scoped></style>

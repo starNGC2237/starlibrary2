@@ -25,7 +25,7 @@ const imgBg = ref(imgBgUrl)
 </template>
 
 <style scoped lang="scss">
-.join {
+.join__container {
   position: relative;
   padding-block: 3rem;
 }
