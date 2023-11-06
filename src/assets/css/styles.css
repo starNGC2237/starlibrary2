@@ -144,7 +144,9 @@ img {
 /* Add shadow header */
 
 /* Active link */
-
+.active-link{
+  color: var(--first-color) !important;
+}
 /*=============== SEARCH ===============*/
 
 /* Show search */

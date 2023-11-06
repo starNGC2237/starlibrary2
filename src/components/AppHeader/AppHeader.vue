@@ -32,7 +32,7 @@ onBeforeUnmount(() => {
       <div class="nav__menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#home" class="nav__link">
+            <a href="#home" class="nav__link active-link">
               <i class="ri-home-line"></i>
               <span>Home</span>
             </a>
