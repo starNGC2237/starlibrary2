@@ -33,15 +33,15 @@ onBeforeUnmount(() => {
 const scrollActive = () => {
   const sections = document.querySelectorAll('section[id]')
   const scrollDown = window.scrollY
-  sections.forEach((cur) => {
+  sections.forEach((cur: HTMLElement) => {
     const sectionHeight = cur.offsetHeight
     const sectionTop = cur.offsetTop - 58
     const sectionId = cur.getAttribute('id')
     const sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
     if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-      sectionClass.classList.add('active-link')
+      sectionClass?.classList.add('active-link')
     } else {
-      sectionClass.classList.remove('active-link')
+      sectionClass?.classList.remove('active-link')
     }
   })
 }
