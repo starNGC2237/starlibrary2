@@ -11,7 +11,7 @@ import AppJoin from '@/components/AppJoin/AppJoin.vue'
 import AppTestimonial from '@/components/AppTestimonial/AppTestimonial.vue'
 import AppFooter from '@/components/AppFooter/AppFooter.vue'
 import { onBeforeUnmount, onMounted } from 'vue'
-import ScrollReveal from '../public/scrollreveal.min.js'
+import ScrollReveal from 'ScrollReveal'
 
 // TODO: use throttle to improve performance
 const scrollUpFn = () => {
