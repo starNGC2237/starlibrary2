@@ -10,9 +10,14 @@ import AppNewBook from '@/components/AppNewBook/AppNewBook.vue'
 import AppJoin from '@/components/AppJoin/AppJoin.vue'
 import AppTestimonial from '@/components/AppTestimonial/AppTestimonial.vue'
 import AppFooter from '@/components/AppFooter/AppFooter.vue'
-import { onBeforeUnmount, onMounted } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import ScrollReveal from 'scrollreveal'
+import { darkTheme as darkThemeNaive } from 'naive-ui/es/themes/dark'
+import { NConfigProvider } from 'naive-ui'
+import type { ComponentInternalInstance } from 'vue'
+import { getCurrentInstance } from 'vue'
 
+const { appContext } = getCurrentInstance() as ComponentInternalInstance
 // TODO: use throttle to improve performance
 const scrollUpFn = () => {
   const header = document.getElementById('scroll-up') as HTMLElement
@@ -20,8 +25,13 @@ const scrollUpFn = () => {
     ? header.classList.add('show-scroll')
     : header.classList.remove('show-scroll')
 }
-
+let theme = ref(window.localStorage.getItem('selected-theme') || 'light')
 onMounted(() => {
+  appContext.config.globalProperties.$mitt.on('theme', (res: string) => {
+    console.log(res)
+    theme.value = res
+  })
+
   window.addEventListener('scroll', scrollUpFn)
   window.addEventListener('scroll', scrollActive)
   const sr = ScrollReveal({
@@ -64,44 +74,46 @@ const scrollActive = () => {
 </script>
 
 <template>
-  <!--==================== HEADER ====================-->
-  <AppHeader />
+  <n-config-provider :theme="theme === 'dark' ? darkThemeNaive : null">
+    <!--==================== HEADER ====================-->
+    <AppHeader />
 
-  <!--==================== SEARCH ====================-->
-  <AppSearch />
+    <!--==================== SEARCH ====================-->
+    <AppSearch />
 
-  <!--==================== LOGIN ====================-->
-  <AppLogin />
+    <!--==================== LOGIN ====================-->
+    <AppLogin />
 
-  <!--==================== MAIN ====================-->
-  <main class="main">
-    <!--==================== HOME ====================-->
-    <MainHome />
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <MainHome />
 
-    <!--==================== SERVICES ====================-->
-    <AppServices />
+      <!--==================== SERVICES ====================-->
+      <AppServices />
 
-    <!--==================== FEATURED ====================-->
-    <AppFeatured />
+      <!--==================== FEATURED ====================-->
+      <AppFeatured />
 
-    <!--==================== DISCOUNT ====================-->
-    <AppDiscount />
+      <!--==================== DISCOUNT ====================-->
+      <AppDiscount />
 
-    <!--==================== NEW BOOKS ====================-->
-    <AppNewBook />
+      <!--==================== NEW BOOKS ====================-->
+      <AppNewBook />
 
-    <!--==================== JOIN ====================-->
-    <AppJoin />
+      <!--==================== JOIN ====================-->
+      <AppJoin />
 
-    <!--==================== TESTIMONIAL ====================-->
-    <AppTestimonial />
-  </main>
+      <!--==================== TESTIMONIAL ====================-->
+      <AppTestimonial />
+    </main>
 
-  <!--==================== FOOTER ====================-->
-  <AppFooter />
-  <a href="#" class="scrollup" id="scroll-up">
-    <i class="ri-arrow-up-line"></i>
-  </a>
+    <!--==================== FOOTER ====================-->
+    <AppFooter />
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+  </n-config-provider>
 </template>
 
 <style scoped>

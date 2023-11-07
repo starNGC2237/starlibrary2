@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance, onBeforeUnmount, onMounted, ref } from 'vue'
+import { NSelect } from 'naive-ui'
+import { getLanguage } from '@/utils'
 
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -38,6 +40,7 @@ const changeTheme = () => {
   themeButton.value.classList.toggle(iconTheme)
   localStorage.setItem('selected-theme', getCurrentTheme())
   localStorage.setItem('selected-icon', getCurrentIcon())
+  appContext.config.globalProperties.$mitt.emit('theme', getCurrentTheme())
 }
 
 onMounted(() => {
@@ -57,31 +60,31 @@ onBeforeUnmount(() => {
           <li class="nav__item">
             <a href="#home" class="nav__link active-link">
               <i class="ri-home-line"></i>
-              <span>Home</span>
+              <span>{{ $t('Home') }}</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#featured" class="nav__link">
               <i class="ri-book-3-line"></i>
-              <span>Featured</span>
+              <span>{{ $t('Featured') }}</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#discount" class="nav__link">
               <i class="ri-price-tag-3-line"></i>
-              <span>Discount</span>
+              <span>{{ $t('Discount') }}</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#new" class="nav__link">
               <i class="ri-bookmark-line"></i>
-              <span>New Books</span>
+              <span>{{ $t('New Books') }}</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#testimonial" class="nav__link">
               <i class="ri-message-3-line"></i>
-              <span>Testimonial</span>
+              <span>{{ $t('Testimonial') }}</span>
             </a>
           </li>
         </ul>
@@ -90,6 +93,13 @@ onBeforeUnmount(() => {
         <i class="ri-search-line search-button" id="search-button" @click="gotoSearch"></i>
         <i class="ri-user-line login-button" id="login-button" @click="gotoLogin"></i>
         <i class="ri-moon-line change-theme" id="theme-button" @click="changeTheme"></i>
+        <n-select
+          :consistent-menu-width="false"
+          v-model:value="$i18n.locale"
+          :options="
+            $i18n.availableLocales.map((locale) => ({ label: getLanguage(locale), value: locale }))
+          "
+        />
       </div>
     </nav>
   </header>

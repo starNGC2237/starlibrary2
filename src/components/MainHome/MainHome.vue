@@ -37,15 +37,14 @@ onMounted(() => {
     <div class="home__container container grid">
       <div class="home__data">
         <h1 class="home__title">
-          Browse & <br />
-          Select books
+          {{ $t('Browse&') }} <br />
+          {{ $t('SelectBooks') }}
         </h1>
         <p class="home__description">
-          Find the best books from your favorite writers, explore hundreds of books with all
-          possible categories,take advantage of the 50% discount and much more.
+          {{ $t('home.description') }}
         </p>
 
-        <a href="#" class="button">Explore Now</a>
+        <a href="#" class="button">{{ $t('ExploreNow') }}</a>
       </div>
 
       <div class="home__images">

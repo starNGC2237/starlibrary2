@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,400;16..144,500;16..144,600&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -166,27 +165,10 @@ body.dark-theme {
   overflow: hidden; /* For animation ScrollReveal */
 }
 
-/*=============== HEADER & NAV ===============*/
-
-/* Navigation for mobile devices */
-
-/* Add shadow header */
-
 /* Active link */
 .active-link {
   color: var(--first-color) !important;
 }
-/*=============== SEARCH ===============*/
-
-/* Show search */
-
-/*=============== LOGIN ===============*/
-
-/* Show login */
-
-/*=============== HOME ===============*/
-
-/* Swiper class */
 
 /*=============== BUTTON ===============*/
 .button {
@@ -200,17 +182,17 @@ body.dark-theme {
 .button:hover {
   box-shadow: 0 4px 32px hsla(230, 72%, 32%, 0.4);
 }
-/*=============== SERVICES ===============*/
-
-/*=============== FEATURED ===============*/
 
 /* Swiper class */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  content: '';
+  content: '' !important;
 }
 .swiper-button-next,
 .swiper-button-prev {
+  position: absolute;
+  top:50%;
+  z-index: 100;
   width: initial;
   height: initial;
   background-color: var(--container-color);
@@ -221,16 +203,14 @@ body.dark-theme {
   transition:
     border 0.4s,
     background-color 0.4s;
+  transform: translateY(-50%);
 }
-/*=============== DISCOUNT ===============*/
-
-/*=============== NEW ===============*/
-
-/*=============== JOIN ===============*/
-
-/*=============== TESTIMONIAL ===============*/
-
-/*=============== FOOTER ===============*/
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {

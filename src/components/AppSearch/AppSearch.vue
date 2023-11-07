@@ -27,7 +27,7 @@ onBeforeMount(() => {
   <div class="search" id="search-content">
     <form action="" class="search__form">
       <i class="ri-search-line search__icon"></i>
-      <input type="search" placeholder="What are you looking for?" class="search__input" />
+      <input type="search" :placeholder="$t('What are you looking for?')" class="search__input" />
     </form>
 
     <i class="ri-close-line search__close" id="search-close" @click="closeSearch"></i>

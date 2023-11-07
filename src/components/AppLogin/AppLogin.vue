@@ -26,22 +26,22 @@ onBeforeMount(() => {
 <template>
   <div class="login grid" id="login-content">
     <form class="login__form grid">
-      <h3 class="login__title">Log In</h3>
+      <h3 class="login__title">{{ $t('LogIn') }}</h3>
       <div class="login__group grid">
         <div>
-          <label for="login-email" class="login__label">Email</label>
+          <label for="login-email" class="login__label">{{ $t('Email') }}</label>
           <input
             type="email"
-            placeholder="Write your email"
+            :placeholder="$t('EnterYourEmail')"
             id="login-email"
             class="login__input"
           />
         </div>
         <div>
-          <label for="login-pass" class="login__label">Password</label>
+          <label for="login-pass" class="login__label">{{ $t('Password') }}</label>
           <input
             type="password"
-            placeholder="Enter your password"
+            :placeholder="$t('EnterYourPassword')"
             id="login-pass"
             class="login__input"
           />
@@ -49,9 +49,12 @@ onBeforeMount(() => {
       </div>
 
       <div>
-        <span class="login__signup"> You don't have an account?<a href="#">Sign up</a> </span>
-        <a href="#" class="login__forgot"> You forgot your password </a>
-        <button type="submit" class="login__button button">Log In</button>
+        <span class="login__signup">
+          {{ $t('NoAccount') }}
+          <a href="#">{{ $t('SignUp') }}</a>
+        </span>
+        <a href="#" class="login__forgot"> {{ $t('forgotPassword') }} </a>
+        <button type="submit" class="login__button button">{{ $t('LogIn') }}</button>
       </div>
     </form>
 
