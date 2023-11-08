@@ -33,6 +33,22 @@ const en = {
   subscribe2Receive: 'Subscribe to Receive',
   latestUpdates: 'The Latest Updates',
   subscribe: 'Subscribe',
-  customerTestimonials: 'Customer Testimonials'
+  customerTestimonials: 'Customer Testimonials',
+  'find...': 'Find and explore the best',
+  'eBooks...': 'eBooks from all your',
+  'favorite...': 'favourite writers.',
+  about: 'About',
+  company: 'Company',
+  Awards: 'Awards',
+  'F&Qs': 'F&Qs',
+  privacyPolicy: 'Privacy Policy',
+  termsOfServices: 'Terms of Services',
+  contact: 'Contact',
+  blogs: 'Blogs',
+  community: 'Community',
+  ourTeam: 'Our Team',
+  helpCenter: 'Help Center',
+  social: 'Social',
+  rights: 'All Rights Reserved By Bedimcode & starMars'
 }
 export default en

@@ -4,50 +4,50 @@
   <footer class="footer">
     <div class="footer__container container grid">
       <div>
-        <a href="#" class="footer__logo"> <i class="ri-book-3-line"></i> E-book </a>
+        <a href="#" class="footer__logo"> <i class="ri-book-3-line"></i> StarLibrary </a>
         <p class="footer__description">
-          Find and explore the best <br />
-          eBooks from all your <br />
-          favourite writers.
+          {{ $t('find...') }} <br />
+          {{ $t('eBooks...') }} <br />
+          {{ $t('favorite...') }}
         </p>
       </div>
       <div class="footer__data grid">
         <div>
-          <h3 class="footer__links">Abort</h3>
+          <h3 class="footer__links">{{ $t('about') }}</h3>
           <ul class="footer__links">
             <li>
-              <a href="#" class="footer__link">Awards</a>
+              <a href="#" class="footer__link">{{ $t('Awards') }}</a>
             </li>
             <li>
-              <a href="#" class="footer__link">F&Qs</a>
+              <a href="#" class="footer__link">{{ $t('F&Qs') }}</a>
             </li>
             <li>
-              <a href="#" class="footer__link">Privacy policy</a>
+              <a href="#" class="footer__link">{{ $t('privacyPolicy') }}</a>
             </li>
             <li>
-              <a href="#" class="footer__link">Terms of services</a>
+              <a href="#" class="footer__link">{{ $t('termsOfServices') }}</a>
             </li>
           </ul>
         </div>
         <div>
-          <h3 class="footer__links">Company</h3>
+          <h3 class="footer__links">{{ $t('company') }}</h3>
           <ul class="footer__links">
             <li>
-              <a href="#" class="footer__link">Blogs</a>
+              <a href="#" class="footer__link">{{ $t('blogs') }}</a>
             </li>
             <li>
-              <a href="#" class="footer__link">Community</a>
+              <a href="#" class="footer__link">{{ $t('community') }}</a>
             </li>
             <li>
-              <a href="#" class="footer__link">Our team</a>
+              <a href="#" class="footer__link">{{ $t('ourTeam') }}</a>
             </li>
             <li>
-              <a href="#" class="footer__link">Help center</a>
+              <a href="#" class="footer__link">{{ $t('helpCenter') }}</a>
             </li>
           </ul>
         </div>
         <div>
-          <h3 class="footer__links">Contact</h3>
+          <h3 class="footer__links">{{ $t('contact') }}</h3>
           <ul class="footer__links">
             <li>
               <address class="footer__info">
@@ -62,7 +62,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="footer__links">Social</h3>
+          <h3 class="footer__links">{{ $t('social') }}</h3>
           <div class="footer__links">
             <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
               <i class="ri-facebook-circle-line"></i>
@@ -77,7 +77,7 @@
         </div>
       </div>
     </div>
-    <span class="footer__copy"> &#169; All Rights Reserved By Bedimcode </span>
+    <span class="footer__copy"> &#169; {{ $t('rights') }} </span>
   </footer>
 </template>
 
@@ -88,6 +88,7 @@
 .footer__container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   row-gap: 3rem;
 }
 .footer__logo {

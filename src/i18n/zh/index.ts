@@ -33,6 +33,22 @@ const zh = {
   subscribe2Receive: '通过订阅来接收',
   latestUpdates: '最新更新',
   subscribe: '订阅',
-  customerTestimonials: '客户推荐'
+  customerTestimonials: '客户推荐',
+  'find...': '找到并探索最好的',
+  'eBooks...': '来自您所有',
+  'favorite...': '最喜欢的作家的电子书。',
+  about: '关于',
+  Awards: '奖项',
+  'F&Qs': '常见问题',
+  privacyPolicy: '隐私政策',
+  termsOfServices: '服务条款',
+  company: '公司',
+  blogs: '博客',
+  community: '社区',
+  ourTeam: '我们的团队',
+  helpCenter: '帮助中心',
+  contact: '联系',
+  social: '社交',
+  rights: '版权所有 Bedimcode & starMars'
 }
 export default zh
