@@ -8,7 +8,7 @@ const en = {
   'home.description':
     'Find the best new_books from your favorite writers, explore hundreds of new_books with all possible categories,take advantage of the 50% discount and much more.',
   'Browse&': 'Browse &',
-  SelectBooks: 'Select new_books',
+  SelectBooks: 'Select books',
   ExploreNow: 'Explore Now',
   LogIn: 'Log In',
   Email: 'Email',
