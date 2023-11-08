@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import 'remixicon/fonts/remixicon.css'
-import './assets/css/styles.css'
+import './assets/css/main.css'
 import mitt from 'mitt'
 import { createI18n } from 'vue-i18n'
 import { register } from 'swiper/element/bundle'
