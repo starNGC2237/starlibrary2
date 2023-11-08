@@ -2,7 +2,8 @@
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance, onBeforeUnmount, onMounted, ref } from 'vue'
 import { NPopselect } from 'naive-ui'
-import { getLanguage } from '@/utils'
+import { getLanguage, getLang } from '@/utils'
+import i18n from '@/i18n/index.ts'
 
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -42,9 +43,21 @@ const changeTheme = () => {
   localStorage.setItem('selected-icon', getCurrentIcon())
   appContext.config.globalProperties.$mitt.emit('theme', getCurrentTheme())
 }
+// 更改语言后的回调
+const changeLanguage = (value: string) => {
+  // 设置html的lang属性
+  document.documentElement.lang = getLang(value)
+  // 设置localStorage
+  window.localStorage.setItem('locale', value)
+}
 
 onMounted(() => {
   window.addEventListener('scroll', shadowFn)
+  // 设置i18n的locale
+  console.log(window.localStorage.getItem('locale'))
+  i18n.global.locale = window.localStorage.getItem('locale') || 'en'
+  // 设置html的lang属性
+  document.documentElement.lang = getLang(i18n.global.locale)
 })
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', shadowFn)
@@ -95,6 +108,7 @@ onBeforeUnmount(() => {
         <i class="ri-moon-line change-theme" id="theme-button" @click="changeTheme"></i>
         <n-popselect
           v-model:value="$i18n.locale"
+          @update:value="changeLanguage"
           :options="
             $i18n.availableLocales.map((locale) => ({ label: getLanguage(locale), value: locale }))
           "
