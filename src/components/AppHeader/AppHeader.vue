@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance, onBeforeUnmount, onMounted, ref } from 'vue'
-import { NSelect } from 'naive-ui'
+import { NPopselect } from 'naive-ui'
 import { getLanguage } from '@/utils'
 
 const darkTheme = 'dark-theme'
@@ -93,13 +93,15 @@ onBeforeUnmount(() => {
         <i class="ri-search-line search-button" id="search-button" @click="gotoSearch"></i>
         <i class="ri-user-line login-button" id="login-button" @click="gotoLogin"></i>
         <i class="ri-moon-line change-theme" id="theme-button" @click="changeTheme"></i>
-        <n-select
-          :consistent-menu-width="false"
+        <n-popselect
           v-model:value="$i18n.locale"
           :options="
             $i18n.availableLocales.map((locale) => ({ label: getLanguage(locale), value: locale }))
           "
-        />
+          trigger="click"
+        >
+          <i class="ri-global-line" id="language-button"></i>
+        </n-popselect>
       </div>
     </nav>
   </header>
