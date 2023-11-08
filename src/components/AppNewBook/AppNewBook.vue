@@ -1,26 +1,40 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import img1Url from '@/assets/img/book-1.png'
-import img2Url from '@/assets/img/book-2.png'
-import img3Url from '@/assets/img/book-3.png'
-import img4Url from '@/assets/img/book-4.png'
-import img5Url from '@/assets/img/book-5.png'
-import img6Url from '@/assets/img/book-6.png'
-import img7Url from '@/assets/img/book-7.png'
-import img8Url from '@/assets/img/book-8.png'
-import img9Url from '@/assets/img/book-9.png'
-import img10Url from '@/assets/img/book-10.png'
+import img1Url from '@/assets/img/new_books/book-1.png'
+import img2Url from '@/assets/img/new_books/book-2.png'
+import img3Url from '@/assets/img/new_books/book-3.png'
+import img4Url from '@/assets/img/new_books/book-4.png'
+import img5Url from '@/assets/img/new_books/book-5.png'
+import img6Url from '@/assets/img/new_books/book-6.png'
+import img7Url from '@/assets/img/new_books/book-7.png'
+import img8Url from '@/assets/img/new_books/book-8.png'
+import img9Url from '@/assets/img/new_books/book-9.png'
+import img10Url from '@/assets/img/new_books/book-10.png'
 import Swiper from 'swiper'
-const img1 = ref(img1Url)
-const img2 = ref(img2Url)
-const img3 = ref(img3Url)
-const img4 = ref(img4Url)
-const img5 = ref(img5Url)
-const img6 = ref(img6Url)
-const img7 = ref(img7Url)
-const img8 = ref(img8Url)
-const img9 = ref(img9Url)
-const img10 = ref(img10Url)
+const imageUrls = ref([
+  img1Url,
+  img2Url,
+  img3Url,
+  img4Url,
+  img5Url,
+  img6Url,
+  img7Url,
+  img8Url,
+  img9Url,
+  img10Url
+])
+const reverseImageUrls = ref([
+  img10Url,
+  img9Url,
+  img8Url,
+  img7Url,
+  img6Url,
+  img5Url,
+  img4Url,
+  img3Url,
+  img2Url,
+  img1Url
+])
 let swiper = ref()
 let swiper2 = ref()
 
@@ -56,161 +70,8 @@ onMounted(() => {
     <div class="new__container container">
       <div class="new_swiper swiper">
         <div class="swiper-wrapper">
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img1" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img2" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img3" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img4" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img5" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img6" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img7" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img8" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img9" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img10" alt="image" class="new__img" />
+          <a href="#" class="new__card swiper-slide" v-for="item in imageUrls" :key="item">
+            <img :src="item" alt="image" class="new__img" />
             <div>
               <h2 class="new__title">New Book</h2>
               <div class="new__prices">
@@ -230,161 +91,8 @@ onMounted(() => {
       </div>
       <div class="new_swiper2 swiper">
         <div class="swiper-wrapper">
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img10" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img9" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img8" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img7" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img6" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img5" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img4" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img3" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img2" alt="image" class="new__img" />
-            <div>
-              <h2 class="new__title">New Book</h2>
-              <div class="new__prices">
-                <span class="new__discount">$7.99</span>
-                <span class="new__price">$14.99</span>
-              </div>
-              <div class="new__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="new__card swiper-slide">
-            <img :src="img1" alt="image" class="new__img" />
+          <a href="#" class="new__card swiper-slide" v-for="item in reverseImageUrls" :key="item">
+            <img :src="item" alt="image" class="new__img" />
             <div>
               <h2 class="new__title">New Book</h2>
               <div class="new__prices">

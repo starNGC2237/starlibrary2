@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import img1Url from '@/assets/img/testimonial-perfil-1.png'
-import img2Url from '@/assets/img/testimonial-perfil-2.png'
-import img3Url from '@/assets/img/testimonial-perfil-3.png'
-import img4Url from '@/assets/img/testimonial-perfil-4.png'
+import img1Url from '@/assets/img/testimonial_perfils/testimonial-perfil-1.png'
+import img2Url from '@/assets/img/testimonial_perfils/testimonial-perfil-2.png'
+import img3Url from '@/assets/img/testimonial_perfils/testimonial-perfil-3.png'
+import img4Url from '@/assets/img/testimonial_perfils/testimonial-perfil-4.png'
 import Swiper from 'swiper'
 import { onMounted, ref } from 'vue'
-const img1 = ref(img1Url)
-const img2 = ref(img2Url)
-const img3 = ref(img3Url)
-const img4 = ref(img4Url)
+
+const images = ref([img1Url, img2Url, img3Url, img4Url])
 let swiper = ref()
 
 onMounted(() => {
@@ -36,53 +34,8 @@ onMounted(() => {
     <div class="testimonial__container container">
       <div class="testimonial__swiper swiper">
         <div class="swiper-wrapper">
-          <article class="testimonial__card swiper-slide">
-            <img :src="img1" alt="image" class="testimonial__img" />
-            <h2 class="testimonial__title">Rial Loz</h2>
-            <p class="testimonial_description_">
-              The best website to buy books, the purchase is very easy to make and has great
-              discounts.
-            </p>
-            <div class="testimonial__stars">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-half-fill"></i>
-            </div>
-          </article>
-          <article class="testimonial__card swiper-slide">
-            <img :src="img2" alt="image" class="testimonial__img" />
-            <h2 class="testimonial__title">Rial Loz</h2>
-            <p class="testimonial_description_">
-              The best website to buy books, the purchase is very easy to make and has great
-              discounts.
-            </p>
-            <div class="testimonial__stars">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-half-fill"></i>
-            </div>
-          </article>
-          <article class="testimonial__card swiper-slide">
-            <img :src="img3" alt="image" class="testimonial__img" />
-            <h2 class="testimonial__title">Rial Loz</h2>
-            <p class="testimonial_description_">
-              The best website to buy books, the purchase is very easy to make and has great
-              discounts.
-            </p>
-            <div class="testimonial__stars">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-half-fill"></i>
-            </div>
-          </article>
-          <article class="testimonial__card swiper-slide">
-            <img :src="img4" alt="image" class="testimonial__img" />
+          <article class="testimonial__card swiper-slide" v-for="item in images" :key="item">
+            <img :src="item" alt="image" class="testimonial__img" />
             <h2 class="testimonial__title">Rial Loz</h2>
             <p class="testimonial_description_">
               The best website to buy books, the purchase is very easy to make and has great

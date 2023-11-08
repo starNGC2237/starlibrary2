@@ -6,9 +6,9 @@ const en = {
   Testimonial: 'Testimonial',
   'What are you looking for?': 'What are you looking for?',
   'home.description':
-    'Find the best books from your favorite writers, explore hundreds of books with all possible categories,take advantage of the 50% discount and much more.',
+    'Find the best new_books from your favorite writers, explore hundreds of new_books with all possible categories,take advantage of the 50% discount and much more.',
   'Browse&': 'Browse &',
-  SelectBooks: 'Select books',
+  SelectBooks: 'Select new_books',
   ExploreNow: 'Explore Now',
   LogIn: 'Log In',
   Email: 'Email',
@@ -28,7 +28,7 @@ const en = {
   addToCart: 'Add to Cart',
   'upTo50%Discount': 'Up To 50% Discount',
   longSaleDescription:
-    'Take advantage of the discount days we have for you, buy books from your favorite writers,the more you buy, the more discount we have for you.',
+    'Take advantage of the discount days we have for you, buy new_books from your favorite writers,the more you buy, the more discount we have for you.',
   shopNow: 'Shop Now',
   subscribe2Receive: 'Subscribe to Receive',
   latestUpdates: 'The Latest Updates',

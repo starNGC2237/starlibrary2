@@ -11,5 +11,4 @@
       "path": "./tsconfig.vitest.json"
     }
   ],
-  "include": ["src/**/*.ts", "**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

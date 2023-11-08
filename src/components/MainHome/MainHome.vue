@@ -1,14 +1,12 @@
 <script setup lang="ts">
+import img1 from '@/assets/img/home_books/home-book-1.png'
+import img2 from '@/assets/img/home_books/home-book-2.png'
+import img3 from '@/assets/img/home_books/home-book-3.png'
+import img4 from '@/assets/img/home_books/home-book-4.png'
 import { onMounted, ref } from 'vue'
-import img1 from '@/assets/img/home-book-1.png'
-import img2 from '@/assets/img/home-book-2.png'
-import img3 from '@/assets/img/home-book-3.png'
-import img4 from '@/assets/img/home-book-4.png'
 import Swiper from 'swiper'
-const imgUrl1 = ref(img1)
-const imgUrl2 = ref(img2)
-const imgUrl3 = ref(img3)
-const imgUrl4 = ref(img4)
+
+const homeImageUrls = ref([img1, img2, img3, img4])
 let swiper = ref()
 
 onMounted(() => {
@@ -50,17 +48,8 @@ onMounted(() => {
       <div class="home__images">
         <div class="home__swiper swiper">
           <div class="swiper-wrapper">
-            <article class="home__article swiper-slide">
-              <img :src="imgUrl1" alt="image" class="home__img" />
-            </article>
-            <article class="home__article swiper-slide">
-              <img :src="imgUrl2" alt="image" class="home__img" />
-            </article>
-            <article class="home__article swiper-slide">
-              <img :src="imgUrl3" alt="image" class="home__img" />
-            </article>
-            <article class="home__article swiper-slide">
-              <img :src="imgUrl4" alt="image" class="home__img" />
+            <article class="home__article swiper-slide" v-for="item in homeImageUrls" :key="item">
+              <img :src="item" alt="image" class="home__img" />
             </article>
           </div>
         </div>

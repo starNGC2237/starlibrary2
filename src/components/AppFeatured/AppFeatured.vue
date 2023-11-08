@@ -1,27 +1,29 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import img1 from '@/assets/img/book-1.png'
-import img2 from '@/assets/img/book-2.png'
-import img3 from '@/assets/img/book-3.png'
-import img4 from '@/assets/img/book-4.png'
-import img5 from '@/assets/img/book-5.png'
-import img6 from '@/assets/img/book-6.png'
-import img7 from '@/assets/img/book-7.png'
-import img8 from '@/assets/img/book-8.png'
-import img9 from '@/assets/img/book-9.png'
-import img10 from '@/assets/img/book-10.png'
+import img1Url from '@/assets/img/new_books/book-1.png'
+import img2Url from '@/assets/img/new_books/book-2.png'
+import img3Url from '@/assets/img/new_books/book-3.png'
+import img4Url from '@/assets/img/new_books/book-4.png'
+import img5Url from '@/assets/img/new_books/book-5.png'
+import img6Url from '@/assets/img/new_books/book-6.png'
+import img7Url from '@/assets/img/new_books/book-7.png'
+import img8Url from '@/assets/img/new_books/book-8.png'
+import img9Url from '@/assets/img/new_books/book-9.png'
+import img10Url from '@/assets/img/new_books/book-10.png'
 import Swiper from 'swiper'
 
-const imgUrl1 = ref(img1)
-const imgUrl2 = ref(img2)
-const imgUrl3 = ref(img3)
-const imgUrl4 = ref(img4)
-const imgUrl5 = ref(img5)
-const imgUrl6 = ref(img6)
-const imgUrl7 = ref(img7)
-const imgUrl8 = ref(img8)
-const imgUrl9 = ref(img9)
-const imgUrl10 = ref(img10)
+const imgUrls = ref([
+  img1Url,
+  img2Url,
+  img3Url,
+  img4Url,
+  img5Url,
+  img6Url,
+  img7Url,
+  img8Url,
+  img9Url,
+  img10Url
+])
 let swiper = ref()
 
 onMounted(() => {
@@ -52,152 +54,8 @@ onMounted(() => {
     <div class="featured__container container">
       <div class="featured__swiper swiper">
         <div class="swiper-wrapper">
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl1" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl2" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl3" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl4" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl5" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl6" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl7" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl8" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl9" alt="image" />
-            <h2 class="featured__title">Featured Book</h2>
-            <div class="featured__prices">
-              <span class="featured__discount">$11.99</span>
-              <span class="featured__price">$11.99</span>
-            </div>
-
-            <button class="button">{{ $t('addToCart') }}</button>
-
-            <div class="featured__actions">
-              <button><i class="ri-search-line"></i></button>
-              <button><i class="ri-heart-3-line"></i></button>
-              <button><i class="ri-eye-line"></i></button>
-            </div>
-          </article>
-          <article class="featured__card swiper-slide">
-            <img class="featured__img" :src="imgUrl10" alt="image" />
+          <article class="featured__card swiper-slide" v-for="item in imgUrls">
+            <img class="featured__img" :src="item" alt="image" />
             <h2 class="featured__title">Featured Book</h2>
             <div class="featured__prices">
               <span class="featured__discount">$11.99</span>

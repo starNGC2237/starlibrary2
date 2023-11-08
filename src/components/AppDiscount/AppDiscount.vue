@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import img1Url from '@/assets/img/discount-book-1.png'
-import img2Url from '@/assets/img/discount-book-2.png'
+import img1Url from '@/assets/img/discount_books/discount-book-1.png'
+import img2Url from '@/assets/img/discount_books/discount-book-2.png'
 import { ref } from 'vue'
-const img1 = ref(img1Url)
-const img2 = ref(img2Url)
+const images = ref([img1Url, img2Url])
 </script>
 
 <template>
@@ -18,8 +17,13 @@ const img2 = ref(img2Url)
         <a href="#" class="button">{{ $t('shopNow') }}</a>
       </div>
       <div class="discount__images">
-        <img :src="img1" alt="image" class="discount__img_1" />
-        <img :src="img2" alt="image" class="discount__img_2" />
+        <img
+          :src="item"
+          alt="image"
+          :class="'discount__img_' + (index + 1)"
+          v-for="(item, index) in images"
+          :key="item"
+        />
       </div>
     </div>
   </section>
