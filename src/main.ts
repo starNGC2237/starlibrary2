@@ -7,7 +7,7 @@ import { register } from 'swiper/element/bundle'
 import App from './App.vue'
 import router from './router'
 import 'swiper/css'
-import i18n from '@/i18n/index.ts'
+import i18n from '@/i18n/index'
 
 // register Swiper custom elements
 register()

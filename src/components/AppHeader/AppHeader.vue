@@ -2,8 +2,8 @@
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance, onBeforeUnmount, onMounted, ref } from 'vue'
 import { NPopselect } from 'naive-ui'
-import { getLanguage, getLang } from '@/utils'
-import i18n from '@/i18n/index.ts'
+import { getLang, getLanguage } from '@/utils'
+import i18n from '@/i18n/index'
 
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -44,7 +44,7 @@ const changeTheme = () => {
   appContext.config.globalProperties.$mitt.emit('theme', getCurrentTheme())
 }
 // 更改语言后的回调
-const changeLanguage = (value: string) => {
+const changeLanguage = (value: 'zh' | 'en') => {
   // 设置html的lang属性
   document.documentElement.lang = getLang(value)
   // 设置localStorage
@@ -53,9 +53,7 @@ const changeLanguage = (value: string) => {
 
 onMounted(() => {
   window.addEventListener('scroll', shadowFn)
-  // 设置i18n的locale
-  console.log(window.localStorage.getItem('locale'))
-  i18n.global.locale = window.localStorage.getItem('locale') || 'en'
+  i18n.global.locale = (window.localStorage.getItem('locale') || 'en') as 'zh' | 'en'
   // 设置html的lang属性
   document.documentElement.lang = getLang(i18n.global.locale)
 })

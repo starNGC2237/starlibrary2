@@ -54,7 +54,7 @@ onMounted(() => {
     <div class="featured__container container">
       <div class="featured__swiper swiper">
         <div class="swiper-wrapper">
-          <article class="featured__card swiper-slide" v-for="item in imgUrls">
+          <article class="featured__card swiper-slide" v-for="item in imgUrls" :key="item">
             <img class="featured__img" :src="item" alt="image" />
             <h2 class="featured__title">Featured Book</h2>
             <div class="featured__prices">
