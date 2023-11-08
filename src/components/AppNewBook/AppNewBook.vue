@@ -52,7 +52,7 @@ onMounted(() => {
 
 <template>
   <section class="new section" id="new">
-    <h2 class="section__title">New Books</h2>
+    <h2 class="section__title">{{ $t('New Books') }}</h2>
     <div class="new__container container">
       <div class="new_swiper swiper">
         <div class="swiper-wrapper">

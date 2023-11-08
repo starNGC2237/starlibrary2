@@ -17,6 +17,22 @@ const zh = {
   EnterYourEmail: '输入您的邮箱',
   NoAccount: '您还没有一个账号？',
   forgotPassword: '您忘记了密码？',
-  SignUp: '注册'
+  SignUp: '注册',
+  freeShopping: '免费购物',
+  orderMore: '订购超过$100',
+  securePayment: '安全支付',
+  '100%SecurePayment': '100％安全支付',
+  allSupport: '24/7 支持',
+  callUsAnytime: '随时给我们打电话',
+  featuredBooks: '精选书籍',
+  addToCart: '添加到购物车',
+  'upTo50%Discount': '高达50％的折扣',
+  longSaleDescription:
+    '利用我们为您提供的折扣日，购买您最喜欢的作家的书籍，您购买的越多，我们为您提供的折扣就越多。',
+  shopNow: '立即购买',
+  subscribe2Receive: '通过订阅来接收',
+  latestUpdates: '最新更新',
+  subscribe: '订阅',
+  customerTestimonials: '客户推荐'
 }
 export default zh

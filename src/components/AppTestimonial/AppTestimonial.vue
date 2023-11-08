@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
   <section class="testimonial section" id="testimonial">
-    <h2 class="section__title">Customer Testimonials</h2>
+    <h2 class="section__title">{{ $t('customerTestimonials') }}</h2>
 
     <div class="testimonial__container container">
       <div class="testimonial__swiper swiper">

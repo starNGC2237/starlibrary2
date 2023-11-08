@@ -5,18 +5,18 @@
     <div class="services__container container grid">
       <article class="services__card">
         <i class="ri-truck-line"></i>
-        <h3 class="services__title">Free Shopping</h3>
-        <p class="services__description">Order More Than $100</p>
+        <h3 class="services__title">{{ $t('freeShopping') }}</h3>
+        <p class="services__description">{{ $t('orderMore') }}</p>
       </article>
       <article class="services__card">
         <i class="ri-lock-2-line"></i>
-        <h3 class="services__title">Secure Payment</h3>
-        <p class="services__description">100% Secure Payment</p>
+        <h3 class="services__title">{{ $t('securePayment') }}</h3>
+        <p class="services__description">{{ $t('100%SecurePayment') }}</p>
       </article>
       <article class="services__card">
         <i class="ri-customer-service-2-line"></i>
-        <h3 class="services__title">24/7 Support</h3>
-        <p class="services__description">Call us anytime</p>
+        <h3 class="services__title">{{ $t('allSupport') }}</h3>
+        <p class="services__description">{{ $t('callUsAnytime') }}</p>
       </article>
     </div>
   </section>
@@ -24,6 +24,9 @@
 
 <style scoped lang="scss">
 .services__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   row-gap: 3rem;
 }
 .services__card {

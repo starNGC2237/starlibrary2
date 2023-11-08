@@ -48,7 +48,7 @@ onMounted(() => {
 
 <template>
   <section class="featured section" id="featured">
-    <h2 class="section__title">Featured Books</h2>
+    <h2 class="section__title">{{ $t('featuredBooks') }}</h2>
     <div class="featured__container container">
       <div class="featured__swiper swiper">
         <div class="swiper-wrapper">
@@ -60,7 +60,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -76,7 +76,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -92,7 +92,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -108,7 +108,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -124,7 +124,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -140,7 +140,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -156,7 +156,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -172,7 +172,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -188,7 +188,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>
@@ -204,7 +204,7 @@ onMounted(() => {
               <span class="featured__price">$11.99</span>
             </div>
 
-            <button class="button">Add to Cart</button>
+            <button class="button">{{ $t('addToCart') }}</button>
 
             <div class="featured__actions">
               <button><i class="ri-search-line"></i></button>

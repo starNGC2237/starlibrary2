@@ -10,13 +10,12 @@ const img2 = ref(img2Url)
   <section class="discount section" id="discount">
     <div class="discount__container container grid">
       <div class="discount__data">
-        <h2 class="discount__title section__title">Up To 50% Discount</h2>
+        <h2 class="discount__title section__title">{{ $t('upTo50%Discount') }}</h2>
         <p class="discount__description">
-          Take advantage of the discount days we have for you, buy books from your favorite writers,
-          the more you buy, the more discount we have for you.
+          {{ $t('longSaleDescription') }}
         </p>
 
-        <a href="#" class="button">Shop Now</a>
+        <a href="#" class="button">{{ $t('shopNow') }}</a>
       </div>
       <div class="discount__images">
         <img :src="img1" alt="image" class="discount__img_1" />

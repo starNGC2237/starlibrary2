@@ -249,7 +249,6 @@ body.dark-theme {
     padding-inline: 1rem !important;
   }
   .footer__data {
-    grid-template-columns: 1fr;
     row-gap: 2rem !important;
   }
 }
@@ -283,7 +282,7 @@ body.dark-theme {
     margin-inline: auto !important;
   }
   .nav__menu {
-    width: 380px !important;
+    width: 100% !important;
     margin-inline: auto !important;
   }
   .home__container,
@@ -294,9 +293,6 @@ body.dark-theme {
   .join__form {
     width: 328px !important;
     justify-self: center !important;
-  }
-  .footer__data {
-    grid-template-columns: repeat(3, max-content) !important;
   }
 }
 
@@ -309,9 +305,10 @@ body.dark-theme {
     justify-self: center !important;
   }
   .services__container {
-    grid-template-columns: repeat(3, max-content) !important;
-    justify-content: center !important;
     column-gap: 5rem !important;
+  }
+  .services__container article{
+    width: 100%;
   }
   .footer__container {
     grid-template-columns: repeat(2, max-content) !important;
@@ -414,7 +411,6 @@ body.dark-theme {
     padding-block: 6rem 3rem !important;
   }
   .footer__data {
-    grid-template-columns: repeat(4, max-content) !important;
     column-gap: 4.5rem !important;
   }
   .footer__logo,
@@ -456,9 +452,6 @@ body.dark-theme {
   }
   .home__article,.home__img{
     width: 290px !important;
-  }
-  .services__container {
-    grid-template-columns: repeat(3, 1fr) !important;
   }
   .services__card{
     padding: 2rem !important;

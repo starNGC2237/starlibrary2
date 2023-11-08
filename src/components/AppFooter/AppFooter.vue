@@ -86,6 +86,8 @@
   padding-block: 4rem 6rem;
 }
 .footer__container {
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 3rem;
 }
 .footer__logo {
@@ -101,7 +103,8 @@
   }
 }
 .footer__data {
-  grid-template-columns: repeat(2, max-content);
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem 2rem;
 }
 .footer__links {

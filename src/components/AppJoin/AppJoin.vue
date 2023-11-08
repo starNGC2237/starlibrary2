@@ -11,13 +11,13 @@ const imgBg = ref(imgBgUrl)
       <img :src="imgBg" alt="#" class="join__bg" />
       <div class="join__data container grid">
         <h2 class="join__title section__title">
-          Subscribe to Receiver <br />
-          The Latest Updates
+          {{ $t('subscribe2Receive') }} <br />
+          {{ $t('latestUpdates') }}
         </h2>
 
         <form action="" class="join__form">
-          <input type="email" placeholder="Enter email" class="join__input" />
-          <button type="submit" class="join__button button">Subscribe</button>
+          <input type="email" :placeholder="$t('EnterYourEmail')" class="join__input" />
+          <button type="submit" class="join__button button">{{ $t('subscribe') }}</button>
         </form>
       </div>
     </div>

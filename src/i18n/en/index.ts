@@ -17,6 +17,22 @@ const en = {
   EnterYourEmail: 'Enter your email',
   NoAccount: "You don't have an account?",
   forgotPassword: 'You forgot your password?',
-  SignUp: 'Sign Up'
+  SignUp: 'Sign Up',
+  freeShopping: 'Free Shopping',
+  orderMore: 'Order More Than $100',
+  securePayment: 'Secure Payment',
+  '100%SecurePayment': '100% Secure Payment',
+  allSupport: '24/7 Support',
+  callUsAnytime: 'Call Us Anytime',
+  featuredBooks: 'Featured Books',
+  addToCart: 'Add to Cart',
+  'upTo50%Discount': 'Up To 50% Discount',
+  longSaleDescription:
+    'Take advantage of the discount days we have for you, buy books from your favorite writers,the more you buy, the more discount we have for you.',
+  shopNow: 'Shop Now',
+  subscribe2Receive: 'Subscribe to Receive',
+  latestUpdates: 'The Latest Updates',
+  subscribe: 'Subscribe',
+  customerTestimonials: 'Customer Testimonials'
 }
 export default en
