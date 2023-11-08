@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,400;16..144,500;16..144,600&display=swap');
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -455,5 +455,17 @@ body.dark-theme {
   }
   .services__card{
     padding: 2rem !important;
+  }
+  .join__form{
+    width: 500px !important;
+    margin: 0 auto;
+  }
+  .search__form{
+    width: 70% !important;
+    margin: 0 auto;
+  }
+  .login__form{
+    width: 550px !important;
+    margin: 0 auto;
   }
 }
