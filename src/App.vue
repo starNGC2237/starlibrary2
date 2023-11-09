@@ -17,6 +17,20 @@ import { NConfigProvider } from 'naive-ui'
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance } from 'vue'
 
+const lightThemeOverrides = {
+  common: {
+    primaryColor: 'var(--first-color)'
+  }
+  // ...
+}
+
+const darkThemeOverrides = {
+  common: {
+    primaryColor: 'var(--first-color)'
+  }
+  // ...
+}
+
 const { appContext } = getCurrentInstance() as ComponentInternalInstance
 // TODO: use throttle to improve performance
 const scrollUpFn = () => {
@@ -74,7 +88,10 @@ const scrollActive = () => {
 </script>
 
 <template>
-  <n-config-provider :theme="theme === 'dark' ? darkThemeNaive : null">
+  <n-config-provider
+    :theme="theme === 'dark' ? darkThemeNaive : null"
+    :theme-overrides="theme === 'dark' ? darkThemeOverrides : lightThemeOverrides"
+  >
     <!--==================== HEADER ====================-->
     <AppHeader />
 
