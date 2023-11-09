@@ -5,7 +5,7 @@
     <div class="services__container container grid">
       <article class="services__card">
         <i class="ri-truck-line"></i>
-        <h3 class="services__title">{{ $t('freeShopping') }}</h3>
+        <h3 class="services__title">{{ $t('freeShipping') }}</h3>
         <p class="services__description">{{ $t('orderMore') }}</p>
       </article>
       <article class="services__card">

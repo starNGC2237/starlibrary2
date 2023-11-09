@@ -18,7 +18,7 @@ const zh = {
   NoAccount: '您还没有一个账号？',
   forgotPassword: '您忘记了密码？',
   SignUp: '注册',
-  freeShopping: '免费购物',
+  freeShipping: '免费送货',
   orderMore: '订购超过$100',
   securePayment: '安全支付',
   '100%SecurePayment': '100％安全支付',

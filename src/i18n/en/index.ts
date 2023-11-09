@@ -18,7 +18,7 @@ const en = {
   NoAccount: "You don't have an account?",
   forgotPassword: 'You forgot your password?',
   SignUp: 'Sign Up',
-  freeShopping: 'Free Shopping',
+  freeShipping: 'Free Shipping',
   orderMore: 'Order More Than $100',
   securePayment: 'Secure Payment',
   '100%SecurePayment': '100% Secure Payment',
