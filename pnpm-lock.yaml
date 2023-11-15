@@ -43,6 +43,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.18.5
     version: 18.18.8
+  '@types/scrollreveal':
+    specifier: ^0.0.11
+    version: 0.0.11
   '@vitejs/plugin-vue':
     specifier: ^4.4.0
     version: 4.4.0(vite@4.5.0)(vue@3.3.7)
@@ -642,6 +645,10 @@ packages:
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
     dependencies:
       '@types/node': 18.18.8
+    dev: true
+
+  /@types/scrollreveal@0.0.11:
+    resolution: {integrity: sha512-GDOESLkVNyd5FIS980N9rDtp45L7jfyvbDuumtaMXMPfJOFOk/7ADNvXaL/NBggXJHQJSgNNHsJBrQ2mTE7+cA==}
     dev: true
 
   /@types/semver@7.5.4:
