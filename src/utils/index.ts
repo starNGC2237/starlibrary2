@@ -15,3 +15,15 @@ export const getLanguage = (i: string) => {
 export const getLang = (i: string) => {
   return langMap.get(i) || 'en'
 }
+
+export const throttled = (fn: any, wait: number) => {
+  let timeout: number | null = null
+  return () => {
+    if (!timeout) {
+      timeout = window.setTimeout(() => {
+        timeout = null
+        fn()
+      }, wait)
+    }
+  }
+}

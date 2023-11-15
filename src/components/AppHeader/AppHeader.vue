@@ -2,29 +2,33 @@
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance, onBeforeUnmount, onMounted, ref } from 'vue'
 import { NPopselect } from 'naive-ui'
-import { getLang, getLanguage } from '@/utils'
+import { getLang, getLanguage, throttled } from '@/utils'
 import i18n from '@/i18n/index'
-
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
 let themeButton = ref()
 const { appContext } = getCurrentInstance() as ComponentInternalInstance
+const headerRef = ref<HTMLElement>()
+
 const gotoSearch = () => {
   appContext.config.globalProperties.$mitt.emit('search', true)
 }
 const gotoLogin = () => {
   appContext.config.globalProperties.$mitt.emit('login', true)
 }
-// TODO: use throttle to improve performance
-const shadowFn = () => {
-  const header = document.getElementById('header') as HTMLElement
+
+const shadowFn = throttled(() => {
   window.scrollY >= 50
-    ? header.classList.add('shadow-header')
-    : header.classList.remove('shadow-header')
+    ? headerRef.value?.classList.add('shadow-header')
+    : headerRef.value?.classList.remove('shadow-header')
+}, 1000 / 60)
+const getCurrentTheme = () => {
+  return document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 }
-const getCurrentTheme = () => (document.body.classList.contains(darkTheme) ? 'dark' : 'light')
-const getCurrentIcon = () =>
-  themeButton.value.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+const getCurrentIcon = () => {
+  return themeButton.value.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+}
+
 onMounted(() => {
   themeButton.value = document.getElementById('theme-button') as HTMLElement
   const selectedTheme = localStorage.getItem('selected-theme') || 'light'
@@ -63,7 +67,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="header" id="header">
+  <header class="header" id="header" ref="headerRef">
     <nav class="nav container">
       <a href="#" class="nav__logo"> <i class="ri-book-3-line"></i> StarLibrary </a>
       <div class="nav__menu">

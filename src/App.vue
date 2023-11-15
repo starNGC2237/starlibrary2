@@ -16,6 +16,7 @@ import { darkTheme as darkThemeNaive } from 'naive-ui/es/themes/dark'
 import { NConfigProvider } from 'naive-ui'
 import type { ComponentInternalInstance } from 'vue'
 import { getCurrentInstance } from 'vue'
+import { throttled } from '@/utils'
 
 const lightThemeOverrides = {
   common: {
@@ -32,13 +33,13 @@ const darkThemeOverrides = {
 }
 
 const { appContext } = getCurrentInstance() as ComponentInternalInstance
-// TODO: use throttle to improve performance
-const scrollUpFn = () => {
+
+const scrollUpFn = throttled(() => {
   const header = document.getElementById('scroll-up') as HTMLElement
   window.scrollY >= 50
     ? header.classList.add('show-scroll')
     : header.classList.remove('show-scroll')
-}
+}, 1000 / 60)
 let theme = ref(window.localStorage.getItem('selected-theme') || 'light')
 onMounted(() => {
   appContext.config.globalProperties.$mitt.on('theme', (res: string) => {
@@ -67,8 +68,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', scrollActive)
 })
 
-// TODO: use throttle to improve performance
-const scrollActive = () => {
+const scrollActive = throttled(() => {
   const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section[id]')
   const scrollDown = window.scrollY
   sections.forEach((cur) => {
@@ -84,7 +84,7 @@ const scrollActive = () => {
       sectionClass?.classList.remove('active-link')
     }
   })
-}
+}, 1000 / 60)
 </script>
 
 <template>
