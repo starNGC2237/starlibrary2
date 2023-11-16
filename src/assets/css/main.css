@@ -1,4 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
+@font-face {
+  font-family: "MonaspaceRadon";
+  src: url("../fonts/MonaspaceNeon-Light.woff");
+}
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -16,7 +20,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Montserrat', sans-serif;
+  --body-font: "MonaspaceRadon", sans-serif;
   --second-font: 'Montagu Slab', serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -206,9 +210,11 @@ body.dark-theme {
   transform: translateY(-50%);
 }
 .swiper-button-next {
+  cursor: pointer;
   right: 0;
 }
 .swiper-button-prev {
+  cursor: pointer;
   left: 0;
 }
 
