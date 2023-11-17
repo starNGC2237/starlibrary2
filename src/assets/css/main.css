@@ -293,7 +293,7 @@ body.dark-theme {
   }
   .home__container,
   .discount__container {
-    grid-template-columns: 420px !important;
+    grid-template-columns: 100% !important;
     justify-content: center !important;
   }
   .join__form {
@@ -304,10 +304,10 @@ body.dark-theme {
 
 @media screen and (max-width: 768px) {
   .home__container {
-    grid-template-columns: 580px !important;
+    grid-template-columns: 100% !important;
   }
   .home__data {
-    width: 420px !important;
+    width: 100% !important;
     justify-self: center !important;
   }
   .services__container {
