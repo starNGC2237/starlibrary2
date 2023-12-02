@@ -135,13 +135,15 @@ const scrollActive = throttled(() => {
 
 <style scoped>
 .scrollup {
+  display: flex;
+  line-height: normal;
   position: fixed;
   right: 1rem;
   bottom: -50%;
   background-color: var(--container-color);
   box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
-  display: inline-block;
-  padding: 6px;
+  padding: 10px;
+  border-radius: 50%;
   font-size: 1.25rem;
   color: var(--title-color);
   z-index: var(--z-tooltip);
@@ -149,8 +151,14 @@ const scrollActive = throttled(() => {
     bottom 0.4s,
     transform 0.4s,
     background-color 0.4s;
+  > i {
+    color: var(--text-color);
+  }
   &:hover {
     transform: translateY(-0.5rem);
+    > i {
+      color: var(--first-color);
+    }
   }
 }
 .show-scroll {
